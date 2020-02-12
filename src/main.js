@@ -1,5 +1,6 @@
 let body = 
-    ` <div class="bg-img"></div>
+    ` 
+     
       <div class="details">
         <div class="details-heading">
           <h1>Odunsi's Restaurant</h1>
