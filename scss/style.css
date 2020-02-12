@@ -1,32 +1,18 @@
-.bg-img {
-  position: relative;
-  background: #bfc7d4;
-  overflow: hidden;
-  height: 100%;
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
 }
 
-.bg-img:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0.6;
-  background-image: url("../images/close-up-photo-of-a-cheese-burger-1633578.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  background-size: cover;
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
 }
 
 .details {
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
@@ -36,18 +22,117 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
+  width: 50%;
   padding: 20px;
   text-align: center;
+  opacity: 0;
+  margin-top: 100px;
+  -webkit-animation: 1s fadein 0.5s forwards;
+          animation: 1s fadein 0.5s forwards;
 }
 
-#content {
-  height: 100%;
+.details h1 {
+  text-shadow: 2px 2px 1px #195de5;
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
+  overflow: hidden;
+}
+
+[data-tab-content] {
+  display: none;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+[data-tab-content].active[data-tab-content] {
+  display: block;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs .tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tabs .tab:hover {
+  background-color: #AAA;
+}
+
+.tabs .tab.active {
+  background-color: #ccc;
+}
+
+#content #menu::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/plate-of-rice-and-cooked-meat-1624487.jpg);
+}
+
+#content #about::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/top-view-photo-of-restaurant-2253643.jpg);
+}
+
+#content #contact::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/selective-focus-photography-of-open-signage-1036857.jpg);
+}
+
+#content #home::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/plate-of-rice-and-cooked-meat-1624487.jpg);
 }
 /*# sourceMappingURL=style.css.map */

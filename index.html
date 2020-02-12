@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Page</title>
     <link rel="stylesheet" href="./scss/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
+    <ul class="tabs"> 
+        <li data-tab-target="#home" class="tab active">Home</li>
+        <li data-tab-target="#menu" class="tab" >Menu</li>
+        <li data-tab-target="#about" class="tab">About</li>
+        <li data-tab-target="#contact" class="tab">Contact</li>
+    </ul>
     <div id="content">
-		
+        <div id="home" class="active" data-tab-content>
+            
+        </div>
+        <div id="menu" data-tab-content="">
+            <h1>Menu</h1>
+            <p>Read about us</p>
+        </div>
+        <div id="about" data-tab-content="">
+            <h1>Menu</h1>
+            <p>What can we offer</p>
+        </div>
+        <div id="contact" data-tab-content="">
+            <h1>Contact</h1>
+            <p>We are just an email away :) </p>
+        </div>
     </div>
-  </body>
-  <script src="../src/index.js" type="module"></script>
+</body>
+<script src="../src/index.js" type="module"></script>
+
 </html>
