@@ -32,6 +32,7 @@ const menuGen = () => {
     menuContainer.appendChild(foods)
 
     return menuContainer
+
 }
 
 export default menuGen
