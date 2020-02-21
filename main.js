@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst contactGen = () => {\n    const contact = document.createElement('div')\n    contact.setAttribute('id', 'contact')\n    contact.setAttribute('data-tab-content', \" \")\n\n    const form = document.createElement('div')\n    form.classList.add('form')\n\n    const name = document.createElement('input')\n    name.setAttribute('placeholder', 'Name')\n    name.setAttribute('type', 'text')\n\n    const mail = document.createElement('input')\n    mail.setAttribute('placeholder', 'Email')\n    mail.setAttribute('type', 'email')\n\n    const submit = document.createElement('input')\n    submit.setAttribute('value', 'Submit')\n    submit.setAttribute('type', 'submit')\n\n    const textarea = document.createElement('textarea')\n    textarea.setAttribute('cols', '30')\n    textarea.setAttribute('rows', '10')\n    textarea.setAttribute('placeholder', 'We like to hear from you')\n\n    form.appendChild(name)\n    form.appendChild(mail)\n    form.appendChild(textarea)\n    form.appendChild(submit)\n\n    contact.appendChild(form)\n\n    return contact\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (contactGen);\n\n//# sourceURL=webpack:///./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst homeGen = () => {\n  //
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _initialPageLoad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initialPageLoad */ \"./src/initialPageLoad.js\");\n\n\n\nconsole.clear()\n\nconst content = document.querySelector('#content')\nconst tabs = document.querySelectorAll('[data-tab-target]');\nconst tabContents = document.querySelectorAll('[data-tab-content]')\n\n\n// onload()\ntabs.forEach(tab => {\n    tab.addEventListener('click', function(e) {\n        if(e.target.id == 'home'){\n            tabs[2].classList.remove('active')\n            tabs[1].classList.remove('active')\n            tab.classList.add('active')\n            content.innerHTML = ``\n            content.appendChild(Object(_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])())\n        } else if (e.target.id == 'menu'){\n            tabs[0].classList.remove('active')\n            tabs[2].classList.remove('active')\n            tab.classList.add('active')\n        //     document.querySelector('#content').innerHTML = `<div id=\"menu\" class=\"active\" data-tab-content=\"\">\n        //     <h1>Menu</h1>\n        //     <p>Read about us</p>\n        // </div>`\n        } else {\n            tabs[0].classList.remove('active')\n            tabs[1].classList.remove('active')\n            tab.classList.add('active')\n            document.querySelector('#content').innerHTML = `<div id=\"contact\" data-tab-content=\"\">\n            <h1>Contact</h1>\n            <p>We are just an email away :) </p>\n        </div>`\n        }\n    })\n});\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _initialPageLoad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initialPageLoad */ \"./src/initialPageLoad.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\nconsole.clear()\n\nconst content = document.querySelector('#content')\nconst tabs = document.querySelectorAll('[data-tab-target]');\nconst tabContents = document.querySelectorAll('[data-tab-content]')\n\n\nObject(_initialPageLoad__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\ntabs.forEach(tab => {\n    tab.addEventListener('click', function(e) {\n        if (e.target.id == 'home') {\n            tabs[2].classList.remove('active')\n            tabs[1].classList.remove('active')\n            tab.classList.add('active')\n            content.innerHTML = ``\n            content.appendChild(Object(_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])())\n        } else if (e.target.id == 'menu') {\n            tabs[0].classList.remove('active')\n            tabs[2].classList.remove('active')\n            tab.classList.add('active')\n            content.innerHTML = ``\n            content.appendChild(Object(_menu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])())\n        } else {\n            tabs[0].classList.remove('active')\n            tabs[1].classList.remove('active')\n            tab.classList.add('active')\n            content.innerHTML = ``\n            content.appendChild(Object(_contact_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])())\n        }\n    })\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -119,6 +131,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hom
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n\nconst onload = ()=> {\n    document.addEventListener('DOMContentLoaded', function () {\n        document.querySelector('#content').appendChild(Object(_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n    });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (onload);\n\n//# sourceURL=webpack:///./src/initialPageLoad.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst foodContainer = (source, text) => {\n\n    let food = document.createElement('div')\n    food.classList.add('food')\n\n    let img = document.createElement('img')\n\n    let paragraph = document.createElement('p')\n    paragraph.classList.add('name')\n    paragraph.textContent = text\n\n    img.setAttribute('src', source)\n\n    food.appendChild(img)\n    food.appendChild(paragraph)\n\n    return food\n}\nconst menuGen = () => {\n    const menuContainer = document.createElement('div');\n    menuContainer.setAttribute('id', 'menu')\n    menuContainer.setAttribute('data-tab-content', \" \")\n\n    let foods = document.createElement('div')\n    foods.classList.add('foods')\n\n\n    foods.appendChild(foodContainer('./images/jollof-featured-image.jpg', 'Nigerian Jollof Rice'));\n    foods.appendChild(foodContainer('./images/POUNDED-YAM-696x464.jpg', 'Pounded Yam'))\n    foods.appendChild(foodContainer('./images/Chicken-Suya.jpg', 'Chicken Suya'))\n\n    menuContainer.appendChild(foods)\n\n    return menuContainer\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (menuGen);\n\n//# sourceURL=webpack:///./src/menu.js?");
 
 /***/ })
 
